@@ -6,9 +6,7 @@ To run the application, follow these steps:
 
 Start PostgreSQL and RabbitMQ using Docker Compose:
 
-shell
-Copy code
-docker-compose up -d
+`docker-compose up -d`
 Run the Employee Service application.
 
 The application will initialize with two pre-existing employee records in the database.
@@ -21,20 +19,15 @@ Get All Employees: Retrieve all employees.
 HTTP Method: GET
 URL: http://localhost:8080/api/v1/employee
 Authorization: No authorization required for this endpoint.
+
 Create an Employee: Add a new employee record.
-
 HTTP Method: POST
-
 URL: http://localhost:8080/api/v1/employee
-
 Headers:
-
 Content-Type: application/json
 Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 Example Request:
 
-shell
-Copy code
 curl --location 'http://localhost:8080/api/v1/employee' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=' \
