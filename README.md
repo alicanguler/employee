@@ -1,7 +1,9 @@
-Employee Service
+# Employee Service
+
 The Employee Service application allows you to perform CRUD (Create, Read, Update, and Delete) operations on employee records. It leverages PostgreSQL for database storage and RabbitMQ for event handling.
 
-Getting Started
+### Getting Started
+
 To run the application, follow these steps:
 
 Start PostgreSQL and RabbitMQ using Docker Compose:
@@ -13,26 +15,35 @@ Run the Employee Service application.
 The application will initialize with two pre-existing employee records in the database.
 
 Accessing Employee Records
-Get All Employees
+
+### Get All Employees
+
 Retrieve a list of all employees.
 
 HTTP Method: GET
+
 URL: http://localhost:8080/api/v1/employee
+
 Authorization: No authorization required for this endpoint.
 
 
 
-Get Employee by ID
+### Get Employee by ID
+
 Retrieve an employee record by specifying the employee's unique ID
 
 HTTP Method: GET
+
 URL: http://localhost:8080/api/v1/employee/{employeeId}
+
 URL Example: http://localhost:8080/api/v1/employee/e4d0837a-61b9-4eef-9e60-1e44a7f1ecce
+
 Authorization: No authorization required for this endpoint.
 
 
 
-Create Employee
+## Create Employee
+
 Add a new employee record. The request body must be in JSON format.
 
 HTTP Method: POST
@@ -58,8 +69,10 @@ Example Request:
 }'`
 
 
-Update Employee
+## Update Employee
+
 Update an existing employee's information.
+
 HTTP Method: PATCH
 
 URL: http://localhost:8080/api/v1/employee/{employeeId}
@@ -69,6 +82,7 @@ URL Example: http://localhost:8080/api/v1/employee/123e4567-e89b-12d3-a456-42665
 Headers:
 
 Content-Type: application/json
+
 Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
 Example Request:
 
@@ -82,14 +96,19 @@ Example Request:
 }'`
 
 
-Delete Employee by ID
+## Delete Employee by ID
+
 Delete an employee record by specifying the employee's unique ID.
 
 HTTP Method: DELETE
+
 URL: http://localhost:8080/api/v1/employee/{employeeId}
+
 URL Example: http://localhost:8080/api/v1/employee/123e4567-e89b-12d3-a456-426655440000
+
 Authorization: No authorization required for this endpoint.
 Security
+
 For security purposes, you can use the following credentials:
 
 
