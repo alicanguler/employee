@@ -7,6 +7,7 @@ To run the application, follow these steps:
 Start PostgreSQL and RabbitMQ using Docker Compose:
 
 `docker-compose up -d`
+
 Run the Employee Service application.
 
 The application will initialize with two pre-existing employee records in the database.
@@ -41,9 +42,13 @@ curl --location 'http://localhost:8080/api/v1/employee' \
 "Walking"
 ]
 }'
+
+
 Security
 For security purposes, you can use the following credentials:
 
 Username: username
 Password: password
+
+
 Feel free to adjust and expand this README as needed for your application's documentation.
